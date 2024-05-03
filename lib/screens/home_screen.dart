@@ -8,6 +8,33 @@ import 'package:weather_app/bloc/weather_bloc_bloc.dart';
 
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key, Key? keys});
+  Widget? getweatherIcon(int code){
+    switch(code){
+      case >=200 && <300 :
+      return Image.asset('assetscloudy.png'
+      );
+      case >=300 && >400 :
+      return Image.asset('assets/storm (1).png'
+      );
+       case >=500 && >600 :
+      return Image.asset('assets/storm (2).png'
+      );
+        case >=600 && >700 :
+      return Image.asset('assets/storm.png'
+      );
+        case >=700 && >800 :
+      return Image.asset('assets/weather-app.png'
+      );
+       case ==800:
+      return Image.asset('assets/weather.png'
+      );
+       case >800 && <=804 :
+      return Image.asset('assets/storm (1).png'
+      );
+      default:
+      return Image.asset('assets/cloudy.png');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,12 +119,10 @@ class ScreenHome extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 10),
-                            const Center(
+                             Center(
                               child: SizedBox(
                                 height: 180,
-                                child: Image(
-                                  image: AssetImage("assets/weather.png"),
-                                ),
+                                child: getweatherIcon(state.weather.weatherConditionCode!)
                               ),
                             ),
                              Center(
