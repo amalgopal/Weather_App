@@ -128,7 +128,7 @@ class ScreenHome extends StatelessWidget {
                              Center(
                               child: Text(
                                 '${state.weather.temperature!.celsius!.round()}°c',
-                                style: TextStyle(
+                                style:const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 55,
@@ -138,7 +138,7 @@ class ScreenHome extends StatelessWidget {
                              Center(
                               child: Text(
                                 "${state.weather.weatherMain}",
-                                style: TextStyle(
+                                style:const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 25,
@@ -149,7 +149,7 @@ class ScreenHome extends StatelessWidget {
                              Center(
                               child: Text(
                                 DateFormat('EEEE dd .').add_jm().format(state.weather.date!),
-                                style: TextStyle(
+                                style:const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -220,7 +220,7 @@ class ScreenHome extends StatelessWidget {
                                     const SizedBox(width: 5),
                                     Column(
                                       children: [
-                                         Text(
+                                        const Text(
                                           "Temp Max",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -229,7 +229,7 @@ class ScreenHome extends StatelessWidget {
                                         ),
                                         Text(
                                           '${state.weather.tempMax!.celsius!.round()}°C',
-                                          style:  TextStyle(
+                                          style:const  TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -247,7 +247,7 @@ class ScreenHome extends StatelessWidget {
                                         const Text("Temp Min", style: TextStyle(color: Colors.white)),
                                         Text(
                                           '${state.weather.tempMin!.celsius!.round()}°C',
-                                          style:  TextStyle(
+                                          style:const  TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w700,
                                           ),
